@@ -1,0 +1,33 @@
+$def with( name, data )
+<!-- 声明变量 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>首页</title>
+</head>
+<style>
+table, th, td{
+    border: 1px solid #9E9E9E;
+    border-collapse: collapse;
+    padding: 10px;
+}
+</style>
+<body>
+	<h1>webpy$name</h1>
+	<img src="/static/images/PRIZE_2.png"/>
+	<table>
+		<thead>
+			<tr><th>id</th><th>时间</th><th>描述</th></tr>
+		</thead>
+		<tbody>
+		$for p in data:
+			<tr>
+				<td>$p['live_id']</td>
+				<td>$p['create_time']</td>
+				<td>$p['descp']</td>
+			</tr>
+		</tbody>	
+	</table>
+</body>
+</html>
